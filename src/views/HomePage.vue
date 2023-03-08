@@ -1,82 +1,81 @@
 <template>
   <ion-page>
-    <ion-header :translucent="true">
-      <ion-toolbar>
-        <ion-title>Blank</ion-title>
-      </ion-toolbar>
-    </ion-header>
+    <!-- Header section -->
+    <HeaderSection header-title="My Portfolio"></HeaderSection>
 
-    <ion-content :fullscreen="true">
-      <ion-header collapse="condense">
-        <ion-toolbar>
-          <ion-title size="large">Blank</ion-title>
-        </ion-toolbar>
-      </ion-header>
-
-      <div id="container">
-        <strong>Ready to create an app?</strong>
-        <p>
-          Start with Ionic
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://ionicframework.com/docs/components"
-            >UI Components</a
-          >
-        </p>
+    <!-- Content Area -->
+    <section id="main-area">
+      <div class="details-container">
+        <img :src="ariyibiBaseetLogo" alt="Ariyibi Baseet Logo" />
+        <h2 class="text-white">Ariyibi Baseet .A</h2>
+        <p class="text-white">A solution-driven frontend web engineer.</p>
+        <router-link to="/project-page" class="link"
+          >Explore Project Have worked on</router-link
+        >
+        <div class="col-4 mx-auto mt-3">
+          <div class="row">
+            <div class="col-3">
+              <a href="#"><i class="bi bi-facebook text-white"></i></a>
+            </div>
+            <div class="col-3">
+              <a href="#"> <i class="bi bi-twitter text-white"></i></a>
+            </div>
+            <div class="col-3">
+              <a href="#">
+                <i class="bi bi-linkedin text-white"></i>
+              </a>
+            </div>
+            <div class="col-3">
+              <a href="#">
+                <i class="bi bi-github text-white"></i>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
-    </ion-content>
+    </section>
   </ion-page>
 </template>
 
 <script>
-import {
-  IonContent,
-  IonHeader,
-  IonPage,
-  IonTitle,
-  IonToolbar,
-} from "@ionic/vue";
+import { IonPage } from "@ionic/vue";
+import HeaderSection from "../components/HeaderSection.vue";
 export default {
   components: {
-    IonContent,
-    IonHeader,
     IonPage,
-    IonTitle,
-    IonToolbar,
+    HeaderSection,
   },
   setup() {
-    return {};
+    const ariyibiBaseetLogo = "./assets/image/Ariyibi_Baseet.png";
+    return {
+      ariyibiBaseetLogo,
+    };
   },
 };
 </script>
 
 <style scoped>
-#container {
+#main-area {
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 40px;
+}
+.details-container {
+  margin-top: 100px;
+}
+img {
+  border-radius: 100%;
+  width: 150px;
+  height: 150px;
+  display: block;
+  margin: auto;
+}
+h2,
+p,
+.link {
+  display: block;
   text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
-}
-
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
-}
-
-#container a {
-  text-decoration: none;
 }
 </style>

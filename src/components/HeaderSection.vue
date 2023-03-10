@@ -1,24 +1,15 @@
 <template>
   <ion-header>
     <ion-toolbar>
-      <ion-buttons slot="start">
-        <ion-back-button></ion-back-button>
-      </ion-buttons>
-      <ion-title class="ion-text-left">{{ headerTitle }}</ion-title>
+      <ion-title class="ion-text-center">{{ headerTitle }}</ion-title>
     </ion-toolbar>
   </ion-header>
 </template>
 
 <script>
-import {
-  IonHeader,
-  IonToolbar,
-  IonTitle,
-  IonButtons,
-  IonBackButton,
-} from "@ionic/vue";
+import { IonHeader, IonToolbar, IonTitle } from "@ionic/vue";
 export default {
-  components: { IonHeader, IonToolbar, IonTitle, IonButtons, IonBackButton },
+  components: { IonHeader, IonToolbar, IonTitle },
   props: {
     headerTitle: String,
   },
@@ -31,6 +22,8 @@ export default {
 <style scoped>
 ion-title {
   --color: #fff;
-  float: left;
+}
+ion-toolbar {
+  --background: #333 !important;
 }
 </style>

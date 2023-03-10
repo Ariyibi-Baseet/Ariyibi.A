@@ -1,5 +1,7 @@
 {
   "name": "Ariyibi.B",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "vue"
 }

@@ -16,3 +16,10 @@ export default {
   },
 };
 </script>
+
+<style>
+:root {
+  --txt-blue: #6699cc;
+  --btn-bg: #6699cc;
+}
+</style>

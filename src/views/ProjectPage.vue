@@ -2,7 +2,7 @@
   <ion-page>
     <HeaderSection header-title="Projects Have Worked On"></HeaderSection>
     <section id="portfolio-area">
-      <ion-list :inset="true">
+      <ion-list inset="true" lines="inset">
         <a href="#">
           <ion-item>
             <ion-thumbnail slot="start">
@@ -38,10 +38,11 @@
         </a>
       </ion-list>
 
-      <router-link to="/contact-page" class="text-center d-block text-white"
-        ><i class="bi bi-arrow-right-circle-fill text-white"></i>&nbsp; Click
-        Here to drop me message</router-link
+      <router-link to="/contact-page" class="text-center d-block to-contact"
+        ><i class="bi bi-arrow-right-circle-fill"></i>&nbsp; Click Here to drop
+        me message</router-link
       >
+      <ButtonNavs />
     </section>
   </ion-page>
 </template>
@@ -49,6 +50,7 @@
 <script>
 import { IonPage, IonList, IonItem, IonLabel, IonThumbnail } from "@ionic/vue";
 import HeaderSection from "../components/HeaderSection.vue";
+import ButtonNavs from "../components/ButtonNavs.vue";
 export default {
   components: {
     IonPage,
@@ -57,6 +59,7 @@ export default {
     IonLabel,
     IonThumbnail,
     HeaderSection,
+    ButtonNavs,
   },
   setup() {
     const greonImg = "/assets/image/greon.png";
@@ -74,6 +77,7 @@ export default {
 }
 #portfolio-area {
   min-height: 100vh;
+  background-color: #333;
 }
 ion-thumbnail {
   --size: 140px;
@@ -81,5 +85,18 @@ ion-thumbnail {
 }
 ion-label {
   font-size: 20px !important;
+}
+ion-list {
+  padding: 10px !important;
+}
+ion-list a:not(a:first-child) {
+  margin-top: 10px;
+  display: block;
+}
+ion-item {
+  background-color: #333;
+}
+.to-contact {
+  color: var(--txt-blue);
 }
 </style>

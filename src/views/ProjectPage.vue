@@ -3,7 +3,7 @@
     <HeaderSection header-title="Projects Have Worked On"></HeaderSection>
     <section id="portfolio-area">
       <ion-list inset="true" lines="inset">
-        <a href="#">
+        <a href="https://greon.netlify.app/">
           <ion-item>
             <ion-thumbnail slot="start">
               <img alt="" :src="greonImg" />
@@ -14,7 +14,7 @@
             ></ion-label>
           </ion-item>
         </a>
-        <a href="#">
+        <a href="https://ariyibi-baseet-online-portfolio.netlify.app/">
           <ion-item>
             <ion-thumbnail slot="start">
               <img alt="" :src="portfolioImg" />
@@ -25,7 +25,7 @@
             ></ion-label>
           </ion-item>
         </a>
-        <a href="#">
+        <a href="https://github-repository-list.netlify.app/">
           <ion-item>
             <ion-thumbnail slot="start">
               <img alt="" :src="githubImg" />
@@ -62,9 +62,9 @@ export default {
     ButtonNavs,
   },
   setup() {
-    const greonImg = "/assets/image/greon.png";
-    const portfolioImg = "/assets/image/portfolio.png";
-    const githubImg = "/assets/image/interface.png";
+    const greonImg = "./assets/image/greon.png";
+    const portfolioImg = "./assets/image/portfolio.png";
+    const githubImg = "./assets/image/interface.png";
     return { greonImg, portfolioImg, githubImg };
   },
 };

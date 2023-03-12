@@ -10,7 +10,8 @@
         <h2 class="text-white">Ariyibi Baseet .A</h2>
         <p class="text-white">A solution-driven frontend web engineer.</p>
         <router-link to="/project-page" class="link fs-6 project-link"
-          >Explore Projects Have worked on</router-link
+          ><i class="bi bi-arrow-right-short"></i> Explore Projects Have worked
+          on</router-link
         >
         <ButtonNavs />
         <SocialLinks />
@@ -41,6 +42,10 @@ export default {
 </script>
 
 <style scoped>
+* {
+  font-family: var(--ff-monserrat);
+  text-decoration: none;
+}
 ion-page {
   --background: yellow !important;
 }

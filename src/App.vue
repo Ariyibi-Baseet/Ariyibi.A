@@ -21,5 +21,6 @@ export default {
 :root {
   --txt-blue: #6699cc;
   --btn-bg: #6699cc;
+  --ff-monserrat: "Montserrat", sans-serif !important;
 }
 </style>

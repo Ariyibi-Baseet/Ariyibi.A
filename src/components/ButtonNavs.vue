@@ -17,6 +17,9 @@ export default {};
 </script>
 
 <style scoped>
+* {
+  font-family: var(--ff-monserrat);
+}
 /* FOr buttons */
 .btn-block {
   background-color: var(--btn-bg);

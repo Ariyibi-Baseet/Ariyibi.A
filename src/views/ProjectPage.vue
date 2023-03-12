@@ -2,7 +2,7 @@
   <ion-page>
     <HeaderSection header-title="Projects Have Worked On"></HeaderSection>
     <section id="portfolio-area">
-      <ion-list inset="true" lines="inset">
+      <ion-list lines="full">
         <a href="https://greon.netlify.app/">
           <ion-item>
             <ion-thumbnail slot="start">
@@ -38,7 +38,9 @@
         </a>
       </ion-list>
 
-      <router-link to="/contact-page" class="text-center d-block to-contact"
+      <router-link
+        to="/contact-page"
+        class="text-center d-block to-contact mt-3"
         ><i class="bi bi-arrow-right-circle-fill"></i>&nbsp; Click Here to drop
         me message</router-link
       >
@@ -62,9 +64,9 @@ export default {
     ButtonNavs,
   },
   setup() {
-    const greonImg = "./assets/image/greon.png";
-    const portfolioImg = "./assets/image/portfolio.png";
-    const githubImg = "./assets/image/interface.png";
+    const greonImg = "./assets/image/greon.PNG";
+    const portfolioImg = "./assets/image/portfolio.PNG";
+    const githubImg = "./assets/image/interface.PNG";
     return { greonImg, portfolioImg, githubImg };
   },
 };
@@ -74,6 +76,7 @@ export default {
 * {
   box-sizing: border-box !important;
   text-decoration: none;
+  font-family: var(--ff-monserrat);
 }
 #portfolio-area {
   min-height: 100vh;
@@ -98,5 +101,8 @@ ion-item {
 }
 .to-contact {
   color: var(--txt-blue);
+}
+ion-list {
+  --ion-item-background: #333;
 }
 </style>

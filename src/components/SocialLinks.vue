@@ -17,4 +17,8 @@
 export default {};
 </script>
 
-<style scoped></style>
+<style scoped>
+* {
+  font-family: var(--ff-monserrat);
+}
+</style>

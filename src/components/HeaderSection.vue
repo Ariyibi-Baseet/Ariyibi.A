@@ -20,6 +20,9 @@ export default {
 </script>
 
 <style scoped>
+* {
+  font-family: var(--ff-monserrat);
+}
 ion-title {
   --color: #fff;
 }
